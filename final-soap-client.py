@@ -28,7 +28,7 @@ while True:
         username = input('Introduzca el nombre de usuario: ')
         result = client.service.getShortUrl(url, username)
         print("URL creada exitosamente! Informacion: ")
-        print("Acortada: {0}. Original: {1}. Creada: {2}.".format(
-            result['shortVersion'], result['originalVersion'], result['createdAt']))
+        print("Acortada: {0}. Original: {1}. Creada: {2}. Imagen Base 64: {3}".format(
+            result['shortVersion'], result['originalVersion'], result['createdAt'], result['imageBase']))
     elif(op == 3):
         break
