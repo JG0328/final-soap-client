@@ -1,6 +1,6 @@
 from zeep import Client
 
-client = Client('http://localhost:7777/ws/UrlWebService?wsdl')
+client = Client('http://app2.unwanted.software:7777/ws/UrlWebService?wsdl')
 
 while True:
     print('1 - Listado de URL dado un usuario')
@@ -11,7 +11,6 @@ while True:
     if(op == 1):
         username = input('Introduzca el nombre de usuario: ')
         result = client.service.getUrlsByUser(username)
-        # print(result)
         for url in result:
             i = 1
             print("\nURL #{0}. Corta: {1}. Original: {2}. Creada: {3}. Stats: ".format(
