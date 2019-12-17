@@ -12,9 +12,9 @@ while True:
         username = input('Introduzca el nombre de usuario: ')
         password = input('Introduzca la contraseña: ')
         result = client.service.getUrlsByUser(username)
+        i = 1
         for url in result:
-            i = 1
-            print("\nURL #{0}. Corta: {1}. Original: {2}. Creada: {3}. Stats: ".format(
+            print("\nURL #{0}. Corta: https://app2.unwanted.software/s/{1}. Original: {2}. Creada: {3}. Stats: ".format(
                 i, url['shortVersion'], url['originalVersion'], url['createdAt']))
             j = 1
             print("")
@@ -29,7 +29,7 @@ while True:
         password = input('Introduzca la contraseña: ')
         result = client.service.getShortUrl(url, username)
         print("URL creada exitosamente! Informacion: ")
-        print("Acortada: {0}. Original: {1}. Creada: {2}. Imagen Base 64: {3}".format(
+        print("Acortada: https://app2.unwanted.software/s/{0}. Original: {1}. Creada: {2}. Imagen Base 64: {3}".format(
             result['shortVersion'], result['originalVersion'], result['createdAt'], result['imageBase']))
     elif(op == 3):
         break
