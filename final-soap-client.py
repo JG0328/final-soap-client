@@ -26,6 +26,7 @@ while True:
     elif(op == 2):
         url = input('Introduzca la URL a acortar: ')
         username = input('Introduzca el nombre de usuario: ')
+        password = input('Introduzca la contraseña: ')
         result = client.service.getShortUrl(url, username)
         print("URL creada exitosamente! Informacion: ")
         print("Acortada: {0}. Original: {1}. Creada: {2}. Imagen Base 64: {3}".format(
