@@ -10,6 +10,7 @@ while True:
 
     if(op == 1):
         username = input('Introduzca el nombre de usuario: ')
+        password = input('Introduzca la contraseña: ')
         result = client.service.getUrlsByUser(username)
         for url in result:
             i = 1
